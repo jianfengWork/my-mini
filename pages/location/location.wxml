@@ -1,0 +1,6 @@
+<!--pages/location/location.wxml-->
+<view>
+  <view>经度：{{latitude}}</view>
+  <view>纬度：{{longitude}}</view>
+  <view wx:if="{{!latitude}}">当前地址：<button catchtap="getLocationInfo">获取当前位置</button></view>
+</view>
