@@ -1,0 +1,29 @@
+<!--pages/audio/audio.wxml-->
+<view class='audioPlayer'>
+  <view class='player'>
+    <image src='{{audiolist[0].coverimg}}' class='audioBack'></image>
+    <text>{{isPlayAudio}}</text>
+    <view class='audioControls'>
+      <view class='flex'>
+       
+        <view class='bottom' catchtap='playAudio'>
+          <!-- 按钮 -->
+          <view wx:if="{{isPlayAudio}}">
+            <!-- <image src='../../assets/pause.png' /> -->
+            暂停
+          </view>
+          <view wx:if="{{!isPlayAudio}}">
+            <!-- <image src='../../assets/play.png' /> -->
+            播放1
+          </view>
+        </view>
+        <view class='slider' wx:if="{{ true || showProgess }}">
+          <slider bindchange='sliderChange' activeColor='red' block-size="12" value='{{audioTime}}' />
+        </view>
+        <view class='time'>
+          {{showTime1}}/{{showTime2}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
