@@ -1,0 +1,51 @@
+<!--pages/basic/basic.wxml-->
+<include src="./template/header" />
+<import src="./template/footer" />
+<template is="footer1" data="{{ text: '你是?' }}" />
+<template is="footer2" />
+<view>
+  <text class="{{ item.sel === true ? 'sel' : 'sels' }}" wx:for='{{languageList}}' wx:key="index" data-name='{{item.name}}' bindtap='select'>{{item.name}}</text>
+</view>
+<view class="section">
+  <textarea bindblur="bindTextAreaBlur" placeholder-style="color:#999;" placeholder="自动变高" value="{{text}}"/>
+</view>
+<view>{{code}}</view>
+<view class="section__title">普通选择器</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+  <view class="section">
+  <view class="section__title">日期选择器</view>
+  <picker
+    mode="date"
+    value="{{date}}"
+    start="2015-09-01"
+    end="2020-09-01"
+    bindchange="bindDateChange"
+  >
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+<view>
+  <view class="yuan" bindtap="triggerTransition">
+    <view class="amd {{rotateClass}}">+</view>
+  </view>
+  <view class="chang {{translateClass}}">
+
+  </view>
+</view>
+
+<view>
+  商品
+  <view wx:for="{{ food }}" wx:key="index">
+    <text bindtap="reduce" data-items="{{ item }}">- </text>
+    <text>{{ item.name }}, {{ item.price }}, {{ item.num }}</text>
+    <text bindtap="add" data-items="{{ item }}"> +</text>
+    <text bindtap="del" data-items="{{ item }}">删除</text>
+  </view>
+  <view>总价：{{ total }}</view>
+</view>

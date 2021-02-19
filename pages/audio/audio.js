@@ -41,7 +41,6 @@ Page({
    */
   onShow: function () {
     this.Initialization();
-    this.loadaudio();
     if (this.data.hide) {
       innerAudioContext.play();
       this.setData({
@@ -114,6 +113,8 @@ Page({
     if (isPlayAudio) {
       // 如果在播放则记录播放的时间seek，暂停
       this.setData({ audioSeek: innerAudioContext.currentTime });
+      // 文案为-暂停，清除计步器
+      clearInterval(this.data.durationIntval);
     } else {
       // 如果在暂停，获取播放时间并继续播放
       innerAudioContext.src = this.data.audiolist[0].audiosrc;
@@ -123,6 +124,8 @@ Page({
       // 跳转到指定时间播放
       innerAudioContext.seek(seek);
       innerAudioContext.play();
+      // 文案为-播放，开启计步器
+      this.loadaudio();
     }
   },
   loadaudio() {

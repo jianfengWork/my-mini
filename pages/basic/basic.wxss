@@ -1,0 +1,49 @@
+/* pages/basic/basic.wxss */
+.sels {
+  color: red;
+  margin-right: 20rpx;
+}
+.sel {
+  color: green;
+  margin-right: 20rpx;
+}
+textarea {
+  color: #333;
+  width: 100%;
+  height: 200rpx;
+  background: #eee;
+}
+.yuan {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #000;
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 48rpx;
+  z-index: 2;
+}
+.amd {
+  transition: all 0.5s;
+}
+.yuan-rotate {
+  transform: rotate(45deg)
+}
+.chang {
+  width: 100rpx;
+  height: 0rpx;
+  position: fixed;
+  bottom: 60rpx;
+  right: 20rpx;
+  z-index: 1;
+  background: #00adef;
+  border-radius: 50rpx 50rpx 0 0;
+  transition: all 0.5s;
+}
+.chang-translate {
+  height: 300rpx;
+}
