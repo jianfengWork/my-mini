@@ -1,4 +1,5 @@
 /* pages/basic/basic.wxss */
+@import './template/header.wxss';
 .sels {
   color: red;
   margin-right: 20rpx;

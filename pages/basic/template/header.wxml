@@ -1,1 +1,1 @@
-<view>我是 header 的内容</view>
+<view class="header-color">我是 header 的内容</view>

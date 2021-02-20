@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/basic/basic",
     "pages/vant/vant",
     "pages/location/location",
-    "pages/basic/basic",
     "pages/audio/audio",
     "pages/snake/snake",
     "pages/index/index",
