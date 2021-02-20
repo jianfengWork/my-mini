@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/vant/vant",
     "pages/location/location",
     "pages/basic/basic",
     "pages/audio/audio",
@@ -13,6 +14,5 @@
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
